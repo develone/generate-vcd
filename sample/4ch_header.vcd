@@ -9,22 +9,22 @@ $comment
 $end
 $timescale 1us $end
 $scope module logic $end
-$var wire 8 # data $end
-$var wire 1 $ ch0 $end
-$var wire 1 % ch1 $end
-$var wire 1 & ch2 $end
-$var wire 1 ' ch3 $end
-$var wire 1 ( empty $end
+ 
+$var wire 1 % ch0 $end
+$var wire 1 & ch1 $end
+$var wire 1 ' ch2 $end
+$var wire 1 ( ch3 $end
+ 
 
 $upscope $end
 $enddefinitions $end
 $dumpvars
-bxxxxxxxx #
-x$
+ 
+
 0%
-x&
-x'
-1(
+0&
+0'
+0(
 
 $end
  

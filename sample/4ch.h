@@ -13,13 +13,10 @@ typedef struct {
 } product_t;    
 
 //char $
+char time_sym,dollar_sym,ch0_sym,ch1_sym,ch2_sym,ch3_sym;
+ 
+ 
 
-char time_sym = 35; // #
-char dollar_sym =36; // $
-char ch0_sym =	37; // %
-char ch1_sym = 38; // &
-char ch2_sym = 39; // '
-char ch3_sym = 40; // '
 
 int read_products(product_t *product);
 #endif
