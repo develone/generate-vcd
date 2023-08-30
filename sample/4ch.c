@@ -44,12 +44,9 @@ char debug[10];
 int main() {
 	time_sym = 35; // #
 	dollar_sym = 36; // $
-	/*	
-	ch0_sym =	37; // %
-	ch1_sym = 38; // &
-	*/
-	ch1_sym =	37; // %
-	ch0_sym = 38; // &
+ 
+	ch0_sym = 37; // %
+	ch1_sym =	38; // &
 	ch2_sym = 39; // '
 	ch3_sym = 40; // (
 	debug[0]='\0';
@@ -108,24 +105,23 @@ int read_products(product_t *product) {
 		product->ch1_p = product->ch1;
 	}
 	if (product->ch2 != product->ch2_p) {
-		printf("%c %d\n",time_sym, lp);
+		printf("%c%d\n",time_sym, lp);
 		sprintf(debug,"%c %d\n", time_sym, lp);
-		fwrite(debug,sizeof(debug),1,debugFile);
 		//printf("%s %d \n",debug,sizeof(debug));
 		fwrite(debug,sizeof(debug),1,debugFile);
-		printf("%d\n", product->ch2 );
+		printf("%d%c\n", product->ch2,ch2_sym );
 		sprintf(debug,"%d %c\n", product->ch2,ch2_sym);
 		fwrite(debug,sizeof(debug),1,debugFile);
 		product->ch2_p = product->ch2;
 	} 
 
 	if (product->ch3 != product->ch3_p) {
-		printf("%c %d\n",time_sym, lp);
+		printf("%c%d\n",time_sym, lp);
 		sprintf(debug,"%c %d\n", time_sym, lp);
 		fwrite(debug,sizeof(debug),1,debugFile);
 		//printf("%s %d \n",debug,sizeof(debug));
 		fwrite(debug,sizeof(debug),1,debugFile);
-		printf("%d\n", product->ch3 );
+		printf("%d%c\n", product->ch3,ch3_sym );
 		sprintf(debug,"%d %c\n", product->ch3,ch3_sym);
 		fwrite(debug,sizeof(debug),1,debugFile);
 		product->ch3_p = product->ch3;
